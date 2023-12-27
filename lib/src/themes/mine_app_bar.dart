@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:note_app/src/constant/color_constant.dart';
 import 'package:note_app/src/constant/image_constant.dart';
 import 'package:note_app/src/constant/string_constant.dart';
@@ -28,6 +29,32 @@ class MineAppBar {
           )
         ],
       ),
+    );
+  }
+
+  static createAppBar() {
+    return AppBar(
+      foregroundColor: primaryColor,
+      elevation: 1,
+      actions: [
+        InkWell(
+          onTap: (){},
+          child: const Icon(
+            Icons.delete,
+            size: 25,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: InkWell(
+            onTap: (){},
+            child: const FaIcon(
+              FontAwesomeIcons.check,
+              size: 25,
+            ),
+          ),
+        )
+      ],
     );
   }
 }
